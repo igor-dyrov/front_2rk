@@ -16,7 +16,7 @@ wss.on('connection', function (ws) {
 
 const express = require('express');
 const app = express();
-var path = require('path');
+const path = require('path');
 
 app.use("/", express.static(__dirname));
 

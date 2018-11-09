@@ -13,10 +13,6 @@ this.addEventListener('fetch', (event) => {
 
 });
 
-this.addEventListener('message', event => {
-  console.log(event.data.msg, event.data.url);
-});
-
 this.addEventListener('install', (event) => {
   console.log('SW installed');
 });
