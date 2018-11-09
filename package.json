@@ -1,0 +1,17 @@
+{
+  "name": "rk2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/server.js"
+  },
+  "author": "codeloft",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0",
+    "ws": "^6.1.0"
+  }
+}
