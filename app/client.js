@@ -6,6 +6,9 @@ function serviceWorkerRegister() {
 		navigator.serviceWorker.register('/worker.js', { scope: '/' })
 			.then((registration) => {
 				console.log('success register of SW: ', registration);
+				navigator.serviceWorker.addEventListener('message', event => {
+  					alert(event.data.msg);
+				});
 			})
 			.catch((error) => {
 				console.log('Registration FAILED: ', error);
@@ -14,10 +17,6 @@ function serviceWorkerRegister() {
 }
 
 serviceWorkerRegister();
-
-navigator.serviceWorker.addEventListener('message', event => {
-  alert(event.data.msg);
-});
 
 const sendBtn = window.document.getElementsByClassName('send-button')[0];
 
